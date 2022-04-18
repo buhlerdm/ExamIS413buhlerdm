@@ -1,0 +1,44 @@
+﻿@{
+    ViewData["Title"] = "Edit";
+}
+@model Quote
+
+
+<div class="text-center">
+    <h1>Edit Quote</h1>
+    <h3>Make changes to the selected quote below, remember you can always make changes to a quote's information!</h3>
+
+    <form method="post">
+
+        <div asp-validation-summary="All"></div>
+
+        <input asp-for="QuoteID" type="hidden" />
+
+        <label asp-for="QuoteSentence">Quote: </label>
+        <input asp-for="QuoteSentence" class="form-control" />
+        <br />
+
+        <label asp-for="Author">Author: </label>
+        <input asp-for="Author" class="form-control" />
+        <br />
+
+
+
+        <label asp-for="Date">Date: </label>
+        <input asp-for="Date" class="form-control" type="date" />
+        <br />
+
+
+        <label asp-for="Subject">Subject: </label>
+        <input asp-for="Subject" class="form-control" />
+        <br />
+
+
+        <label asp-for="Citation">Citation: </label>
+        <input asp-for="Citation" class="form-control" />
+        <br />
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+</div>
